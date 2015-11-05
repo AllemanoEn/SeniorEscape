@@ -8,6 +8,7 @@ public class Pause : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Cursor.visible = false;
 	
 	}
 	
@@ -33,8 +34,10 @@ public class Pause : MonoBehaviour {
     {
         if (enPause)
         {
+            Cursor.visible = true;
             if (GUI.Button(new Rect(Screen.width / 2 - 130, Screen.height / 2 -60, 250, 70),"", skin2))
             {
+                Cursor.visible = false;
                 enPause = false;
             }
 
