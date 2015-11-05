@@ -15,4 +15,16 @@ public class menu : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void Option()
+    {
+        GameObject.Find("fading").GetComponent<Fading>().BeginFade(1);
+
+        Application.LoadLevel(3);
+    }
+
+    public void Retour()
+    {
+        Application.LoadLevel(0);
+    }
 }
