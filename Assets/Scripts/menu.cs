@@ -6,6 +6,8 @@ public class menu : MonoBehaviour {
 
 	public void StartGame()
     {
+        GameObject.Find("fading").GetComponent<Fading>().BeginFade(1);
+        
         Application.LoadLevel(1);
     }
 
@@ -14,6 +16,3 @@ public class menu : MonoBehaviour {
         Application.Quit();
     }
 }
-
-
-

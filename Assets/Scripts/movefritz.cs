@@ -8,10 +8,11 @@ public class movefritz : MoveCharacter {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		transform.localScale = new Vector3 (8,8,3);
+        respawn();
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		//Temps pour le bonus de movespeed
 		if (moveSpeed!=15) {
 			Timer -= Time.deltaTime;
@@ -62,5 +63,6 @@ public class movefritz : MoveCharacter {
 		{
 			anim.SetFloat ("speedfritz", 0);
 		}
+
 	}
 }
